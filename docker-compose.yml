@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: wealthlite-postgres
+    environment:
+      POSTGRES_DB: wealthlite
+      POSTGRES_USER: wealth
+      POSTGRES_PASSWORD: wealth123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
